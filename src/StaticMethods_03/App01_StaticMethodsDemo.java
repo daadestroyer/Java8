@@ -10,8 +10,9 @@ interface Interf {
 	}
 }
 
-public class App01_StaticMethodsDemo  {
+public class App01_StaticMethodsDemo implements Interf {
 	public static void main(String[] args) {
-		Interf.m1();
+		Interf.m1(); // we can call interface static method by interface name only
+
 	}
 }
