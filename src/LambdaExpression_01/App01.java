@@ -1,4 +1,4 @@
-package LambdaExpression;
+package LambdaExpression_01;
 
 // without lambda , here we required implementation class
 /*

@@ -1,4 +1,4 @@
-package LambdaExpression;
+package LambdaExpression_01;
 /*
 // Without lambda expression
 

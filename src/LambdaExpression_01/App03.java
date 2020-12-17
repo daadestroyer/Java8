@@ -1,4 +1,4 @@
-package LambdaExpression;
+package LambdaExpression_01;
 
 interface I1 {
 	public void length(String s);
