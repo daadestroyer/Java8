@@ -44,6 +44,8 @@ public class App05_EmployeeManagementSystem_PART2 {
 		// Predicate to print those employee whose salary is less than 70000
 		Predicate<Employe> p3 = emp -> emp.salary > 70000;
 
+		 
+
 		list.add(new Employe("Sakshi", "SDE", 100000, "Bengaluru"));
 		list.add(new Employe("Shubham", "SDE", 100000, "Bengaluru"));
 		list.add(new Employe("Shubhanshu", "SDE", 100000, "Bengaluru"));
@@ -54,19 +56,28 @@ public class App05_EmployeeManagementSystem_PART2 {
 		System.out.println("Predicate to print those employee whose profile is SDE");
 		display(p1, list);
 		System.out.println("************************");
+		
 		System.out.println("Predicate to print those employee who belong to bengaluru city");
 		display(p2, list);
 		System.out.println("************************");
+		
 		System.out.println("Predicate to print those employee whose salary is greater than 70000");
 		display(p3, list);
 		System.out.println("************************");
+		
 		System.out.println("Predicate to print those employee whose salary is less than 70000");
 		display(p3.negate(), list);
 		System.out.println("************************");
+		
 		System.out.println("Predicate to print those employee whose profile is SDE and belong to bengaluru city");
 		display(p1.and(p2), list);
 		System.out.println("************************");
-		System.out.println("Predicate to print those employee whose salary is grater than 50000 or belong to bengaluru city");
+		
+		System.out.println(
+				"Predicate to print those employee whose salary is grater than 50000 or belong to bengaluru city");
 		display(p2.or(p3), list);
+		System.out.println("************************");
+		
+		 
 	}
 }

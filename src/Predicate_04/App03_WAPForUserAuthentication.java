@@ -21,7 +21,7 @@ public class App03_WAPForUserAuthentication {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter username : ");
 		String name = scanner.next();
-		System.out.print("Enter username : ");
+		System.out.print("Enter userpassword : ");
 		String password = scanner.next();
 		User user = new User(name, password);
 
