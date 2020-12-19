@@ -1,8 +1,9 @@
 package Function_06;
 
 import java.util.ArrayList;
- 
+
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 class Student {
 
@@ -43,10 +44,20 @@ public class App03_FindStudentGradeUsingFunction {
 				return "D[Third Class]";
 		};
 
+		Predicate<Student> p = s -> s.marks > 60;
+		
 		for (Student s : al) {
-			System.out.println("Name : "+s.name);
-			System.out.println("Grade : "+f.apply(s));
+			System.out.println("Name : " + s.name);
+			System.out.println("Grade : " + f.apply(s));
 			System.out.println();
+		}
+		
+		System.out.println("***********************");
+		
+		for(Student s : al) {
+			if(p.test(s)) {
+				System.out.println(s.name);
+			}
 		}
 	}
 }
