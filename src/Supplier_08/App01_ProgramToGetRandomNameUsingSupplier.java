@@ -2,7 +2,7 @@ package Supplier_08;
 
 import java.util.function.Supplier;
 
-public class App01_DemoProgramForSupplier {
+public class App01_ProgramToGetRandomNameUsingSupplier {
 	public static void main(String[] args) {
 		Supplier<String> S = () -> {
 			String[] s1 = { "Sunny", "Bunny", "Chinny", "Pinny" };
