@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class App01 {
+public class App01_GetOddAndEvenNoInListUsingStream {
 	public static void main(String[] args) {
 		/*
 		// without using Stream
