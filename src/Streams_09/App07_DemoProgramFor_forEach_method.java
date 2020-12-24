@@ -7,9 +7,10 @@ public class App07_DemoProgramFor_forEach_method {
 
 		ArrayList<String> aList = new ArrayList<String>();
 		aList.add("sakshi");
-		aList.add("shubham");
-		aList.add("shubhanshu");
 
-		aList.forEach(s -> System.out.print(s));
+		aList.forEach(s -> System.out.println(s));
+		System.out.println();
+		aList.forEach(System.out :: println);
 	}
 }
+	
