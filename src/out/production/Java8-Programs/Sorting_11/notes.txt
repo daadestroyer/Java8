@@ -1,0 +1,16 @@
+Comparable
+----------
+1. by default Collections.sort() method work for those object which are already implementing Comparable
+2. If we want to sort list of Custom created objects , then we need to implement Comparable interface in that class
+   and then override compareTo() method
+
+Comparator
+----------
+1. Generally comparator contains compare() method and Comparable contains compareTo() method
+2. we can pass object of Comparator in sort() method followed by anonymous inner class and override compare() method
+
+
+Java8
+-----
+1. using stream we can call sorted() and then we have comparing() method to sort
+list.stream().sorted(Comparator.comparing(Laptop::getRam).thenComparing(Laptop::getName)).collect(Collectors.toList());
