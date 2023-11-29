@@ -14,6 +14,7 @@ public class App01_ProgramToGetRandomNameUsingSupplier {
 		System.out.println(S.get());
 	}
 }
+
 /*
 Bunny
 Pinny
