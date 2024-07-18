@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-class Laptop {
+class Laptop   { // implements Comparator<Laptop>{
     String name;
     int price;
     int ram;
@@ -38,6 +38,11 @@ class Laptop {
     public void setRam(int ram) {
         this.ram = ram;
     }
+
+//    @Override
+//    public int compare(Laptop o1, Laptop o2) {
+//        return 0;
+//    }
 }
 
 public class App2_SortingUsingComparator {
@@ -56,14 +61,14 @@ public class App2_SortingUsingComparator {
         lst.add(20);
         lst.add(2);
 
-          // way - 1
-//        Collections.sort(lst,(i1,i2)->i2.compareTo(i1));
-//        List<Integer> collect = lst.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
-//        System.out.println(collect);
+          // way - 1 (sorting in descending order)
+        Collections.sort(lst,(i1,i2)->i2.compareTo(i1));
+        List<Integer> lst1 = lst.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+        System.out.println(lst1);
 
-        // way - 2
-//        List<Integer> collect = lst.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
-//        System.out.println(collect);
+        // way - 2 (sorting in ascending order)
+        Collections.sort(lst);
+//        System.out.println(lst);
 
 //        for (Laptop laptop : list) {
 //            System.out.println(laptop.getName());

@@ -39,12 +39,24 @@ class Laptop {
     public void setRam(int ram) {
         this.ram = ram;
     }
+
+    @Override
+    public String toString() {
+        return "Laptop{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", ram=" + ram +
+                '}';
+    }
 }
 
 public class App3_UsingJava8 {
     public static void main(String[] args) {
-        List<Laptop> list = Arrays.asList(new Laptop("Acer", 10000, 14), new Laptop("Apple", 20000, 16), new Laptop("Lenovo", 13000, 6));
+        List<Laptop> list = Arrays.asList(new Laptop("Acer", 10000, 14), new Laptop("Dell", 20000, 16), new Laptop("Lenovo", 13000, 6));
 
+        // sorting name in descending order
+        List<Laptop> collect = list.stream().sorted((Laptop l1, Laptop l2) -> l2.getName().compareTo(l1.getName())).collect(Collectors.toList());
+        System.out.println(collect);
         List<Laptop> lst = list.stream().sorted(Comparator.comparing(Laptop::getRam).thenComparing(Laptop::getName)).collect(Collectors.toList());
 
 
